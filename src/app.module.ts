@@ -3,6 +3,7 @@ import { GraphQLModule } from './modules/graphql/graphql.module';
 import { MikroORM } from '@mikro-orm/core';
 import { ConfigurationModule } from './modules/configuration/configuration.module';
 import { DatabaseModule } from './modules/database/database.module';
+import { OrganisationModule } from './modules/organisation/organisation.module';
 import { ToolsModule } from './modules/tools/tools.module';
 import { ExtendedLogger } from './utils/ExtendedLogger';
 import { FastifyReply, FastifyRequest } from 'fastify';
@@ -44,6 +45,7 @@ const RequestIdHeader = 'X-Request-Id';
         DatabaseModule.register(),
         GraphQLModule.register(),
         ToolsModule,
+        OrganisationModule,
     ],
     controllers: [],
     providers: [],

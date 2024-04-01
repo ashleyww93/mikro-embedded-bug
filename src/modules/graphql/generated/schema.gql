@@ -12,11 +12,23 @@ type Mutation {
   rwTestMikro: Boolean!
   rwTestRequest: Boolean!
   rwTestUlid: Boolean!
+  setupData: Boolean!
+  testBug: Boolean!
   testMutation: [ToolsEntity!]!
 }
 
 type Query {
   testQuery: [ToolsEntity!]!
+}
+
+"""An object used to store catalog reporting stats"""
+type Stats {
+  asExpected: Boolean!
+  extraInformation: String!
+  numberHeldAtTimeOfReporting: Float!
+
+  """The date/time these stats were reported to us"""
+  reportedAt: DateTime
 }
 
 type ToolsEntity {
