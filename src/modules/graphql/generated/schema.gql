@@ -17,6 +17,30 @@ type Mutation {
   testMutation: [ToolsEntity!]!
 }
 
+"""This object represents an organisation."""
+type Organisation {
+  bookStats: Stats
+  createdAt: DateTime!
+  id: String!
+
+  """The date and time this organisation received ingestion data"""
+  lastIngestionDataDate: DateTime
+  metadata: [OrganisationMetadata!]!
+  name: String!
+  orderStats: Stats
+  someBoolean: Boolean!
+  updatedAt: DateTime!
+}
+
+type OrganisationMetadata {
+  createdAt: DateTime!
+  id: String!
+  key: String!
+  organisation: Organisation!
+  updatedAt: DateTime!
+  value: String!
+}
+
 type Query {
   testQuery: [ToolsEntity!]!
 }

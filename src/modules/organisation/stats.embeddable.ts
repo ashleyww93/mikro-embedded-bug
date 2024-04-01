@@ -1,5 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { Embeddable, Property } from '@mikro-orm/core';
+import { Embeddable, Property, types } from '@mikro-orm/core';
 
 @Embeddable()
 @ObjectType({ description: 'An object used to store catalog reporting stats' })
